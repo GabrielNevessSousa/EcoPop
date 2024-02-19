@@ -8,7 +8,7 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between; /* Alinea los elementos a los extremos */
+    justify-content: space-between;
     align-items: center;
     max-width: 1800px;
     margin: 0 auto;
@@ -31,6 +31,7 @@ li {
     text-align: center;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease;
+    cursor: pointer;
 }
 
 li:hover {
@@ -44,7 +45,6 @@ a {
     font-weight: bold;
 }
 
-
 .icons img {
     width: 60px;
     margin-left: 10px;
@@ -52,8 +52,9 @@ a {
 }
 
 .pantalla-principal {
-    margin-left: 820px;
-    margin-top: 70px;
+    margin-left: 550px;
+    margin-top: 160px;
+    display: flex;
 }
 
 .pantalla-principal .logo-verde img {
@@ -77,3 +78,33 @@ footer .logo-footer img {
     width: 30px;
     padding: 10px 20px;
 }
+
+.boton-donar {
+    background-color: #06413D;
+    padding: 80px 130px;
+    margin: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+}
+
+.boton-donar:hover {
+    background-color: #0b302d;
+}
+
+.boton-donar img {
+    width: 120px;
+}
+
+.text-botons {
+    font-size: 20px;
+    font-weight: bold;
+    color: #06413D;
+    display: flex;
+    margin-left: 500px;
+}
+
+.text-botons p {
+    margin-left: 170px;
+}   
