@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de usuario</title>
+</head>
+<body>
+    
+    <div class="logo">
+        <img src="assets/imagenes/ecopop_logo.png" class="eco">
+    </div>
+
+        <div class="formulario">
+        <form>
+            <div class="name">
+            
+            <input type="text" formControlName="nombre">
+            <label>Nombre:</label>
+        </div>
+
+        <div class="name">
+            
+            <input type="text" formControlName="apellidos">
+            <label>Apellidos:</label>
+        </div>
+
+        <div class="name">
+            
+            <input type="email" formControlName="email">
+            <label>Email:</label>
+        </div>
+
+        <div class="name">
+            
+            <input type="password" formControlName="contra">
+            <label>Contraseña:</label>
+        </div>
+
+
+        <button type="submit" [disabled]="!usuarioForm.valid">Editar</button>
+        </form>
+    </div>
+</body>
+</html>
