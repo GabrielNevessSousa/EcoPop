@@ -6,12 +6,16 @@ body{
     height: 100vh;
 }
 
-.logo{
+.imagen{
     text-align: center;
+    
 }
 
 .eco{
-    width: 400px;
+    width: 300px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    background-color: #fff;
 }
 
 .formulario{
@@ -117,4 +121,74 @@ button[type="submit"]:hover{
 
 .iniciar a:hover{
     text-decoration: underline;
+}
+
+header {
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    background-color: #06413D;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Alinea los elementos a los extremos */
+    align-items: center;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+    border: 2px solid #f1dfd5;
+    padding: 10px 20px;
+    width: 100px;
+    text-align: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+li:hover {
+    background-color: #0b302d;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: #f1e1d7;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.icons img {
+    width: 60px;
+    margin-left: 10px;
+    padding: 10px 10px;
+}
+
+footer {
+    justify-content: center;
+    background-color: #06413D;
+    color: #f1dfd5;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .logo-footer img {
+    width: 30px;
+    padding: 10px 20px;
 }
