@@ -8,6 +8,9 @@ import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.co
 import { PaginaDonarComponent } from './pagina-donar/pagina-donar.component';
 import { PaginaDonarDineroComponent } from './pagina-donar-dinero/pagina-donar-dinero.component';
 import { PaginaDonarProductosComponent } from './pagina-donar-productos/pagina-donar-productos.component';
+import { OngsInfoComponent } from './ongs-info/ongs-info.component';
+import { CatalegComponent } from './cataleg/cataleg.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { PaginaDonarProductosComponent } from './pagina-donar-productos/pagina-d
     PaginaPrincipalComponent,
     PaginaDonarComponent,
     PaginaDonarDineroComponent,
-    PaginaDonarProductosComponent
+    PaginaDonarProductosComponent,
+    OngsInfoComponent,
+    CatalegComponent
   ],
   imports: [
     BrowserModule
