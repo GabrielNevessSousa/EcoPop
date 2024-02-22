@@ -83,7 +83,7 @@ footer .logo-footer img {
 }
 
 .pantalla-principal label {
-    font-size: 22px;
+    font-size: 19px;
 }
 
 .pantalla-principal select {
@@ -104,7 +104,45 @@ footer .logo-footer img {
     font-size: 18px;
 }
 
+.pantalla-principal button {
+    background-color: #06413D;
+    color: #f1dfd5;
+    border-width: 0;
+    padding: 10px 20px;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.pantalla-principal button:hover {
+    background-color: #093633;
+}
+
 .pantalla-donar-dinero {
     justify-content: center;
     align-items: center;
+}
+
+.contenedores {
+    display: flex;
+}
+
+.contenedor {
+    background-color: rgb(199, 199, 199);
+    margin: 20px;
+    padding: 20px;
+    height: 200px;
+    width: 150px;
+}
+
+.contenedor p {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.contenedor select {
+    width: 140px;
+    text-align: center;
 }

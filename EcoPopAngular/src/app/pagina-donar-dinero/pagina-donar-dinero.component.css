@@ -108,3 +108,15 @@ footer .logo-footer img {
     justify-content: center;
     align-items: center;
 }
+
+.pantalla-principal button {
+    background-color: #06413D;
+    color: #f1dfd5;
+    border-width: 0;
+    padding: 10px 20px;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}

@@ -10,6 +10,8 @@ import { PaginaDonarDineroComponent } from './pagina-donar-dinero/pagina-donar-d
 import { PaginaDonarProductosComponent } from './pagina-donar-productos/pagina-donar-productos.component';
 import { OngsInfoComponent } from './ongs-info/ongs-info.component';
 import { CatalegComponent } from './cataleg/cataleg.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { CatalegComponent } from './cataleg/cataleg.component';
     CatalegComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
