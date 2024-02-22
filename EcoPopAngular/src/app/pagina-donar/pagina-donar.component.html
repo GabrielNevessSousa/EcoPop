@@ -10,12 +10,12 @@
 <body>
     <header>
         <nav>
-            <a class="logo" href="#"><img style="width: 100px; height: 100px;" src="assets/ecopop_logo.jpg"></a>
+            <a class="logo" routerLink="/" routerLinkActive="active" ><img style="width: 100px; height: 100px;" src="assets/ecopop_logo.jpg"></a>
             <ul>
-                <li><a routerLink="/" routerLinkActive="active">INICI</a></li>
-                <li><a routerLink="/ongs-info" routerLinkActive="active">ONGS</a></li>
-                <li><a routerLink="/cataleg" routerLinkActive="active">CATALEG</a></li>
-                <li><a routerLink="/donar" routerLinkActive="active">DONAR</a></li>
+                <li><a href="#"><button>INICI</button></a></li>
+                <li><a href="#"><button>ONG</button></a></li>
+                <li><a href="#"><button>CATALEG</button></a></li>
+                <li><a routerLink="/donar" routerLinkActive="active"><button>DONAR</button></a></li>
             </ul>
             <div class="icons">
                 <a href="#"><img src="assets/carrito.png"></a>
@@ -25,8 +25,8 @@
     </header>
     <main>
         <div class="pantalla-principal">
-                <a class="boton-donar"><img src="assets/camiseta.png"></a>
-                <a class="boton-donar"><img src="assets/moneda.png"></a>
+                <a class="boton-donar" routerLink="/donar-productos" routerLinkActive="active"><img src="assets/camiseta.png"></a>
+                <a class="boton-donar" routerLink="/donar-dinero" routerLinkActive="active"><img src="assets/moneda.png"></a>
         </div>
         <div class="text-botons">
             <p>DONAR PRODUCTES</p>

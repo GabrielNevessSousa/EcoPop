@@ -33,27 +33,32 @@ ul {
     margin-left: 100px;
 }
 
-li {    
+li {
     display: inline-block;
     margin-right: 20px;
-    border: 2px solid #f1dfd5;
+}
+
+button {
+    background-color: #06413D;
     padding: 10px 20px;
-    width: 100px;
+    width: 150px;
+    border: 2px solid #f1dfd5;
     text-align: center;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease;
     cursor: pointer;
+    color: #f1e1d7;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-li:hover {
+button:hover {
     background-color: #0b302d;
 }
 
 a {
     text-decoration: none;
-    color: #f1e1d7;
-    font-size: 20px;
-    font-weight: bold;
+
 }
 
 
