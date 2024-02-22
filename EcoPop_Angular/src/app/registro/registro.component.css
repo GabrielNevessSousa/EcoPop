@@ -75,7 +75,7 @@ form .name{
 }
 
 .name input:focus ~ label,
-.name input:focus ~ label{
+.name input:valid ~ label{
     top: -5px;
     color: #06413D;
 }
