@@ -5,6 +5,7 @@ import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.co
 import { PaginaDonarComponent } from './pagina-donar/pagina-donar.component';
 import { PaginaDonarDineroComponent } from './pagina-donar-dinero/pagina-donar-dinero.component';
 import { PaginaDonarProductosComponent } from './pagina-donar-productos/pagina-donar-productos.component';
+import { OngsInfoComponent } from './ongs-info/ongs-info.component';
 
 const routes: Routes = [
   { 
@@ -25,6 +26,10 @@ const routes: Routes = [
   { 
     path: 'donar-dinero', 
     component: PaginaDonarDineroComponent 
+  },
+  { 
+    path: 'ongs-info', 
+    component: OngsInfoComponent 
   },
 
 ];
