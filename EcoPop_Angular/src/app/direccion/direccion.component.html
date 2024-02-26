@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirección de envío</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a class="logo" href=""><img style="width: 100px; height: 100px;" src="assets/ecopop_logo.jpg"></a>
+            <ul>
+                <li><a href="#">INICI</a></li>
+                <li><a href="#">ONGS</a></li>
+                <li><a href="#">CATALEG</a></li>
+                <li><a href="#">DONAR</a></li>
+            </ul>
+            <div class="icons">
+                <a href=""><img src="assets/carrito.png"></a>
+                <a href=""><img src="assets/usuario.png"></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="formulario">
+        <h1>Dirección de envío</h1>
+
+    <form method="post">
+        <div class="name">
+        <input type="text" formControlName="direccion" required/>
+        <label>Dirección de domicílio</label>
+        
+    </div>
+    
+    <div class="name">
+        <input type="text" formControlName="ciudad" required/>
+        <label>Ciudad</label>
+    </div>
+    
+
+    <div class="name">
+        <input type="text" formControlName="provincia" required/>
+        <label>Provincia</label>
+    </div>
+    
+    <div class="name">
+        <input type="number" formControlName="portal" required/>
+        <label>Nº Portal</label>
+    </div>
+
+    <div class="name">
+        <input type="number" formControlName="piso" required/>
+        <label>Nº Piso</label>
+    </div>
+    
+    <div class="name">
+        <input type="number" formControlName="puerta" required/>
+        <label>Nº Puerta</label>
+    </div>
+
+    <div class="name">
+        <input type="number" formControlName="postal" required/>
+        <label>Código postal</label>
+    </div>
+    
+        <button type="submit" [disabled]="!direccionForm.valid">Confirmar</button>
+        
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+    <footer>
+        <a class="logo-footer" href=""><img src="assets/instagram.png"></a>
+        <a class="logo-footer" href=""><img src="assets/twitter.png"></a>
+        <a class="logo-footer" href=""><img src="assets/correo.png"></a>
+    </footer>
+    
+</body>
+</html>
