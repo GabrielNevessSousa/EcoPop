@@ -12,6 +12,7 @@ import { OngsInfoComponent } from './ongs-info/ongs-info.component';
 import { CatalegComponent } from './cataleg/cataleg.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { PuntsComponent } from './punts/punts.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     PaginaDonarDineroComponent,
     PaginaDonarProductosComponent,
     OngsInfoComponent,
-    CatalegComponent
+    CatalegComponent,
+    PuntsComponent
   ],
   imports: [
     BrowserModule,
