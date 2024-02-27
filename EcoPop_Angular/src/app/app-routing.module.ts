@@ -17,51 +17,48 @@ const routes: Routes = [
   {
     path: '', pathMatch: 'full', redirectTo: 'login'
   },
-
   {
     path: 'login',
     component: LoginComponent,
   },
-  
   {
     path: 'registro',
     component: RegistroComponent,
   },
-
   {
-  path: 'pag-principal', 
-  component: PaginaPrincipalComponent 
-},
-{ 
-  path: 'donar', 
-  component: PaginaDonarComponent 
-},
-{ 
-  path: 'donar-productos', 
-  component: PaginaDonarProductosComponent 
-},
-{ 
-  path: 'donar-dinero', 
-  component: PaginaDonarDineroComponent 
-},
-{ 
-  path: 'ongs-info', 
-  component: OngsInfoComponent 
-},
-{ 
-  path: 'punts', 
-  component: PuntsComponent 
-},
-{ 
-  path: 'usuario', 
-  component: UsuarioComponent 
-},
+    path: 'pag-principal', 
+    component: PaginaPrincipalComponent 
+  },
+  { 
+    path: 'donar', 
+    component: PaginaDonarComponent 
+  },
+  { 
+    path: 'donar-productos', 
+    component: PaginaDonarProductosComponent 
+  },
+  { 
+    path: 'donar-dinero', 
+    component: PaginaDonarDineroComponent 
+  },
+  { 
+    path: 'ongs-info', 
+    component: OngsInfoComponent 
+  },
+  { 
+    path: 'punts', 
+    component: PuntsComponent 
+  },
+  { 
+    path: 'usuario', 
+    component: UsuarioComponent 
+  },
 
-{ 
-  path: 'cateleg', 
-  component: CatalegComponent 
-},
-];
+  { 
+    path: 'cateleg', 
+    component: CatalegComponent 
+  },
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -10,17 +10,17 @@
 <body>
     <header>
         <nav>
-            <a class="logo" routerLink="/" routerLinkActive="active" ><img style="width: 100px; height: 100px;" src="assets/ecopop_logo.jpg"></a>
+            <a class="logo" routerLink="/pag-principal" routerLinkActive="active" ><img style="width: 100px; height: 100px;" src="assets/ecopop_logo.jpg"></a>
             <ul>
-                <li><a href="#"><button>INICI</button></a></li>
-                <li><a href="#"><button>CATALEG</button></a></li>
+                <li><a routerLink="/pag-principal"  routerLinkActive="active"><button>INICI</button></a></li>
+                <li><a href="/cateleg" routerLinkActive="active"><button>CATALEG</button></a></li>
                 <li><a href="/ongs-info" routerLinkActive="active"><button>ONG</button></a></li>
                 <li><a href="/punts" routerLinkActive="active"><button>PUNTS</button></a></li>
                 <li><a routerLink="/donar" routerLinkActive="active"><button>DONAR</button></a></li>
             </ul>
             <div class="icons">
                 <a href="#"><img src="assets/carrito.png"></a>
-                <a href="#"><img src="assets/usuario.png"></a>
+                <a href="/usuario" routerLinkActive="active"><img src="assets/usuario.png"></a>
             </div>
         </nav>
     </header>
