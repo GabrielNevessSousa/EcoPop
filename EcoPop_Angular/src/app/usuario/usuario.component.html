@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de usuario</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a class="logo" href=""><img style="width: 100px; height: 100px;" src="assets/ecopop_logo.jpg"></a>
+            <ul>
+                <li><a href="#">INICI</a></li>
+                <li><a href="#">ONGS</a></li>
+                <li><a href="#">CATALEG</a></li>
+                <li><a href="#">DONAR</a></li>
+            </ul>
+            <div class="icons">
+                <a href=""><img src="assets/carrito.png"></a>
+                <a href=""><img src="assets/usuario.png"></a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="imagen">
+        <img src="https://picsum.photos/400/400" class="eco" formControlName="imagen">
+    </div>
+
+        <div class="formulario">
+        <form>
+            <div class="name">
+            
+            <input type="text" formControlName="nombre" required>
+            <label>Nombre:</label>
+        </div>
+
+        <div class="name">
+            
+            <input type="text" formControlName="apellidos" required>
+            <label>Apellidos:</label>
+        </div>
+
+        <div class="name">
+            
+            <input type="email" formControlName="email" required>
+            <label>Email:</label>
+        </div>
+
+        <div class="name">
+            
+            <input type="password" formControlName="contra" required>
+            <label>Contraseña:</label>
+        </div>
+
+
+        <button type="submit" [disabled]="!usuarioForm.valid">Editar</button>
+        </form>
+    </div>
+
+    <footer>
+        <a class="logo-footer" href=""><img src="assets/instagram.png"></a>
+        <a class="logo-footer" href=""><img src="assets/twitter.png"></a>
+        <a class="logo-footer" href=""><img src="assets/correo.png"></a>
+    </footer>
+    
+</body>
+</html>
