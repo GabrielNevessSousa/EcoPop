@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import {map, Observable} from "rxjs";
 import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
-import { User } from 'src/Models/user.model';
-
+import { User } from '../../Models/user.model';
 
 
 @Injectable({
@@ -38,4 +37,9 @@ export class UsersService {
       })
     );
   }
+  
+  getUser() {
+    return this.http.get<User>('/api/user'); // Ajusta la URL según la configuración de tu Laravel
+  }
+
 }

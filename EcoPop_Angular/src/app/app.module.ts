@@ -16,6 +16,8 @@ import { PaginaDonarDineroComponent } from './pagina-donar-dinero/pagina-donar-d
 import { CatalegComponent } from './cataleg/cataleg.component';
 import { PuntsComponent } from './punts/punts.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,

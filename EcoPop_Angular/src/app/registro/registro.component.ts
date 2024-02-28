@@ -27,8 +27,6 @@ export class RegistroComponent implements OnInit {
       repetir:['', Validators.required],
   
     });
-
-    
   }
 
   onSubmit() {
