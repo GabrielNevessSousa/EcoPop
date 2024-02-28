@@ -15,6 +15,7 @@ import { OngsInfoComponent } from './ongs-info/ongs-info.component';
 import { PaginaDonarDineroComponent } from './pagina-donar-dinero/pagina-donar-dinero.component';
 import { CatalegComponent } from './cataleg/cataleg.component';
 import { PuntsComponent } from './punts/punts.component';
+import { PaginaAdminComponent } from './pagina-admin/pagina-admin.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PuntsComponent } from './punts/punts.component';
     PaginaDonarProductosComponent,
     OngsInfoComponent,
     CatalegComponent,
-    PuntsComponent
+    PuntsComponent,
+    PaginaAdminComponent
   ],
   imports: [
     BrowserModule,

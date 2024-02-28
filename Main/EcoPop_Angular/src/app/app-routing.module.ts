@@ -10,6 +10,7 @@ import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.co
 import { PuntsComponent } from './punts/punts.component';
 import { RegistroComponent } from './registro/registro.component';
 import { UsuarioComponent } from './usuario/usuario.component';
+import { PaginaAdminComponent } from './pagina-admin/pagina-admin.component';
 
 const routes: Routes = [
 
@@ -26,6 +27,11 @@ const routes: Routes = [
   {
     path: 'registro',
     component: RegistroComponent,
+  },
+
+  {
+    path: 'admin',
+    component: PaginaAdminComponent,
   },
 
   {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsersService } from '../services/users.service';
+import { User } from 'src/Models/user.model';
 
 @Component({
   selector: 'app-login',
@@ -28,20 +29,47 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     if (this.loginForm.valid) {
       const credentials = this.loginForm.value;
-
+  
       this.userService.loginUser(credentials).subscribe({
         next: (response) => {
           console.log('Inicio de sesión exitoso', response);
-          this.loginForm.reset();
-          alert(`Inicio de sesión con éxito`);
-          // Puedes redirigir a la página principal o a otra página después del inicio de sesión
-          this.router.navigateByUrl('/pag-principal');
+  
+          // Verificar si la respuesta tiene la propiedad 'success' y 'user'
+          if (response.success && response.success.user) {
+            const user = response.success.user;
+            //const userId = user.id;
+
+            console.log(user.id);
+            const userEmail = user.email;
+            const userToken = response.success.token;
+  
+            // Ejemplo: Almacenar en el almacenamiento local (localStorage)
+           // localStorage.setItem('user', JSON.stringify({ id: userId, email: userEmail, token: userToken }));
+          
+            this.redirectBasedOnUserRole(user.rol);
+            
+            this.loginForm.reset();
+            alert(`Inicio de sesión con éxito`);
+          }
         },
         error: (error) => {
           alert('Error durante el inicio de sesión');
           // Puedes mostrar un mensaje de error al usuario, como alerta, etc.
         }
       });
+    }
+  }
+  
+  redirectBasedOnUserRole(rol: string) {
+   
+    switch (rol) {
+      case 'admin':
+        this.router.navigateByUrl('/admin');
+        break;
+      case 'usuari':
+        this.router.navigateByUrl('/pag-principal');
+        break;
+    
     }
   }
 }

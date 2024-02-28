@@ -3,6 +3,6 @@ export interface User {
     cognom:string;
     email: string;
     password:string;
-    rol:'usuari';
+    rol:string;
   }
   
