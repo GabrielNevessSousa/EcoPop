@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,12 +20,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
 Route::group(['middleware' => ['cors']], function () {
-
 });
 
 Route::post('registre', [AuthenticationController::class, 'store'])->name('registre.store');
 Route::get('registre/{id}', [AuthenticationController::class, 'show'])->name('registre.show');
 Route::delete('registre/{id}', [AuthenticationController::class, 'destroy'])->name('registre.destroy');
+Route::put('user/{id}', [UserController::class, 'update']);
 Route::post('login', [AuthenticationController::class, 'login']);

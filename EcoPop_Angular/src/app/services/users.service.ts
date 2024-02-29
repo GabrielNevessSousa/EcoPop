@@ -38,8 +38,27 @@ export class UsersService {
     );
   }
   
-  getUser() {
-    return this.http.get<User>('/api/user'); // Ajusta la URL según la configuración de tu Laravel
+  getUser(): Observable<any> {
+    
+    const httpHeaders: HttpHeaders = new HttpHeaders({ 'Content-Type': 'application/json; charset=utf-8' });
+
+    return this.http.get<User>('http://127.0.0.1:8000/api/user', { headers: httpHeaders }).pipe(
+      map((res: any) => {
+        console.log(res);
+        return res;
+      })
+    );
   }
 
+  updateUser(userData: any) {
+
+    const httpHeaders: HttpHeaders = new HttpHeaders({ 'Content-Type': 'application/json; charset=utf-8' });
+
+    return this.http.put<any>('http://127.0.0.1:8000/api/user', userData,  { headers: httpHeaders }).pipe(
+      map((res: any) => {
+        console.log(res);
+        return res;
+      })
+    );
+  }
 }

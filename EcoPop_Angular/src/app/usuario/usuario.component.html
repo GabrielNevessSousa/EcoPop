@@ -21,7 +21,7 @@
     </div>
 
     <div class="formulario">
-        <form [formGroup]="usuarioForm" (ngSubmit)="submitForm()">
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
             <div class="name">
                 <input type="text" formControlName="nombre">
                 <label>Nombre:</label>
@@ -42,15 +42,8 @@
                 <label>Contraseña:</label>
             </div>
     
-            <button type="submit" [disabled]="!usuarioForm.valid">Editar</button>
+            <button type="submit">Editar</button>
         </form>
-    </div>
-
-    <div *ngIf="userData">
-        <p>Nombre: {{ userData.name }}</p>
-        <p>Apellidos: {{ userData.apellidos }}</p>
-        <p>Email: {{ userData.email }}</p>
-        <!-- Asegúrate de ajustar estas propiedades según la estructura de tu objeto de usuario -->
     </div>
 
     <footer>
