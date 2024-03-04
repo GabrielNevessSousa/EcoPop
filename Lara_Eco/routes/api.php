@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProducteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,5 @@ Route::get('registre/{id}', [AuthenticationController::class, 'show'])->name('re
 Route::delete('registre/{id}', [AuthenticationController::class, 'destroy'])->name('registre.destroy');
 Route::put('user/{id}', [UserController::class, 'update']);
 Route::post('login', [AuthenticationController::class, 'login']);
+
+Route::get('producte', [ProducteController::class, 'index']);

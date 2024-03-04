@@ -1,1 +1,33 @@
-<p>cataleg works!</p>
+<body>
+    <header>
+        <nav>
+            <a class="logo" routerLink="/pag-principal" routerLinkActive="active" ><img style="width: 100px; height: 100px;" src="assets/ecopop_logo.jpg"></a>
+            <ul>
+                <li><a routerLink="/pag-principal"  routerLinkActive="active"><button>INICI</button></a></li>
+                <li><a href="/cateleg" routerLinkActive="active"><button>CATALEG</button></a></li>
+                <li><a href="/ongs-info" routerLinkActive="active"><button>ONG</button></a></li>
+                <li><a href="/punts" routerLinkActive="active"><button>PUNTS</button></a></li>
+                <li><a routerLink="/donar" routerLinkActive="active"><button>DONAR</button></a></li>
+            </ul>
+            <div class="icons">
+                <a href=""><img src="assets/carrito.png"></a>
+                <a href="/usuario" routerLinkActive="active"><img src="assets/usuario.png"></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="pantalla-principal">
+            <div *ngFor="let producto of productosArray" class="componente_producto">
+                <img [src]="producto.imatge">
+                <p>{{ producto.nom_producte }}</p>
+                <p>{{ producto.preu }}</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a class="logo-footer" href=""><img src="assets/instagram.png"></a>
+        <a class="logo-footer" href=""><img src="assets/twitter.png"></a>
+        <a class="logo-footer" href=""><img src="assets/correo.png"></a>
+    </footer>
+</body>

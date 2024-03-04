@@ -16,7 +16,6 @@ class Usuarios extends Seeder
      */
     public function run()
     {
-        // Definir los datos de los Xuxemons
         $users = [
             [
                 'nom' => 'usu',
@@ -32,10 +31,9 @@ class Usuarios extends Seeder
                 'password' => Hash::make('123'),
                 'rol' => 'administrador'
             ],
-            // Agregar más Xuxemons si es necesario
         ];
 
-        // Insertar los datos en la tabla 'xuxemons'
+        // Insertar los datos en la tabla 'users'
         DB::table('users')->insert($users);
     }
 }
