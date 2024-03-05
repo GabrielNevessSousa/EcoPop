@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { DireccionComponent } from './direccion/direccion.component';
+import { ConfirmarPedidoComponent } from './confirmar-pedido/confirmar-pedido.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DireccionComponent } from './direccion/direccion.component';
     LoginComponent,
     RegistroComponent,
     UsuarioComponent,
-    DireccionComponent
+    DireccionComponent,
+    ConfirmarPedidoComponent
   ],
   imports: [
     BrowserModule,

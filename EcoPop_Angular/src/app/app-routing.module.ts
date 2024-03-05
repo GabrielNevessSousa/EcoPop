@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ConfirmarPedidoComponent } from './confirmar-pedido/confirmar-pedido.component';
 import { DireccionComponent } from './direccion/direccion.component';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
@@ -26,6 +27,11 @@ const routes: Routes = [
     path: 'direccion',
     component: DireccionComponent,
   },
+
+  {
+    path: 'confirmar-pedido',
+    component: ConfirmarPedidoComponent,
+  }
 ];
 
 @NgModule({
