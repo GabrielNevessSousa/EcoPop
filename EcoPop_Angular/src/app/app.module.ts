@@ -8,6 +8,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { DireccionComponent } from './direccion/direccion.component';
 import { ConfirmarPedidoComponent } from './confirmar-pedido/confirmar-pedido.component';
+import { RealizarPagoComponent } from './realizar-pago/realizar-pago.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ConfirmarPedidoComponent } from './confirmar-pedido/confirmar-pedido.co
     RegistroComponent,
     UsuarioComponent,
     DireccionComponent,
-    ConfirmarPedidoComponent
+    ConfirmarPedidoComponent,
+    RealizarPagoComponent
   ],
   imports: [
     BrowserModule,
