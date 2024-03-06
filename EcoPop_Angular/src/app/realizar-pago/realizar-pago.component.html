@@ -30,6 +30,38 @@
         <h2 class="wave">Realizar pago</h2>
     </div>
 
+    <div class="formulario">
+
+    <form method="post">
+        <div class="name">
+        <input type="text" formControlName="titular" required/>
+        <label>Titular de la tarjeta</label>
+        
+    </div>
+    
+    <div class="name">
+        <input type="number" formControlName="numero" required/>
+        <label>Número de tarjeta</label>
+    </div>
+    
+
+    <div class="name">
+        <input type="text" formControlName="fecha" required/>
+        <label>Fecha de vencimiento</label>
+    </div>
+    
+    <div class="name">
+        <input type="number" formControlName="cvv" required/>
+        <label>CVV</label>
+    </div>
+
+   
+    
+        <button type="submit" [disabled]="!pagoForm.valid">Confirmar</button>
+        
+    </form>
+</div>
+
 
     <footer>
         <a class="logo-footer" href=""><img src="assets/instagram.png"></a>

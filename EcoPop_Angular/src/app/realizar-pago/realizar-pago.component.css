@@ -58,6 +58,135 @@ h2 {
     }
 }
 
+.formulario{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+}
+
+.formulario h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+h1::after,h1::before{
+    margin-top: 25px;
+        content: '';
+        position: absolute;
+        width: 120px;
+        height: 3px;
+        background-color: currentColor;
+        top: 0.6em;
+        transform: scale(0);
+        transition: all 0.2s ease-in;
+}
+
+h1:hover::before, h1:hover::after{
+    transform: scale(1);
+}
+
+h1::before{
+    left: -140px;
+}
+h1::after{
+    right: -140px;
+}
+
+.formulario form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .name{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.name input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.name label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.name span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #06413D;
+}
+
+.name input:focus ~ label,
+.name input:valid ~ label{
+    top: -5px;
+    color: #06413D;
+}
+
+.name input:focus ~ span::before,
+.name input:focus ~ span::before{
+
+        width: 100%;
+}
+
+button[type="submit"]{
+    border: 1px solid #06413D;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    color: #06413D;
+    position: relative;
+    overflow: hidden;
+    margin-left: 85px;
+    }
+    
+    button[type="submit"]:hover{
+    color: #fff;
+    }
+    
+    button[type="submit"]::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        background: #06413D;
+        z-index: -1;
+        transition: 0.8s;
+        top: 0;
+        border-radius: 0 0 50% 50%;
+    }
+    
+    button[type="submit"]:hover::before{
+        height: 180%;
+    }
+
 header {
     background-color: #fff;
     padding: 10px 0;
