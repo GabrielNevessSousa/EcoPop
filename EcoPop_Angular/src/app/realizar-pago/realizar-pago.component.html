@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Realizar pago</title>
 </head>
+
 <body>
 
     <header>
@@ -32,35 +34,35 @@
 
     <div class="formulario">
 
-    <form method="post">
-        <div class="name">
-        <input type="text" formControlName="titular" required/>
-        <label>Titular de la tarjeta</label>
-        
-    </div>
-    
-    <div class="name">
-        <input type="number" formControlName="numero" required/>
-        <label>Número de tarjeta</label>
-    </div>
-    
+        <form method="post">
+            <div class="name">
+                <input type="text" formControlName="titular" required />
+                <label>Titular de la tarjeta</label>
 
-    <div class="name">
-        <input type="text" formControlName="fecha" required/>
-        <label>Fecha de vencimiento</label>
-    </div>
-    
-    <div class="name">
-        <input type="number" formControlName="cvv" required/>
-        <label>CVV</label>
-    </div>
+            </div>
 
-   
-    
-        <button type="submit" [disabled]="!pagoForm.valid">Confirmar</button>
-        
-    </form>
-</div>
+            <div class="name">
+                <input type="number" formControlName="numero" required />
+                <label>Número de tarjeta</label>
+            </div>
+
+
+            <div class="fecha">
+                <input type="date" formControlName="fecha" required />
+                <label>Fecha de vencimiento</label>
+            </div>
+
+            <div class="name">
+                <input type="number" formControlName="cvv" required />
+                <label>CVV</label>
+            </div>
+
+
+
+            <button type="submit" [disabled]="!pagoForm.valid">Confirmar</button>
+
+        </form>
+    </div>
 
 
     <footer>
@@ -68,6 +70,7 @@
         <a class="logo-footer" href=""><img src="assets/twitter.png"></a>
         <a class="logo-footer" href=""><img src="assets/correo.png"></a>
     </footer>
-    
+
 </body>
+
 </html>
