@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
 </head>
+
 <body>
     <div class="logo">
         <img src="assets/imagenes/ecopop_logo.png" class="eco">
@@ -13,43 +15,65 @@
     <div class="formulario">
         <h1>Registro</h1>
 
-    <form method="post">
-        <div class="name">
-        <input type="text" formControlName="nombre" required/>
-        <label>Nombre</label>
-        
+        <form (ngSubmit)="onSubmit()" [formGroup]="registroForm">
+            <div class="name">
+                <input type="text" formControlName="nombre" required />
+                <label>Nombre</label>
+                <div *ngIf="submitted && registroForm.controls['nombre'].errors && registroForm.controls['nombre'].errors['required']"
+                    class="alert alert-danger" style="color: red;">
+                    El nombre es obligatorio
+                </div>
+            </div>
+
+            <div class="name">
+                <input type="text" formControlName="apellidos" required />
+                <label>Apellidos</label>
+                <div *ngIf="submitted && registroForm.controls['apellidos'].errors && registroForm.controls['apellidos'].errors['required']"
+                    class="alert alert-danger" style="color: red;">
+                    Los apellidos son obligatorios
+                </div>
+            </div>
+
+            <div class="name">
+                <input type="email" formControlName="email" required />
+                <label>Email</label>
+                <div *ngIf="submitted && registroForm.controls['email'].errors" class="alert alert-danger"
+                    style="color: red;">
+                    <div *ngIf="registroForm.controls['email'].errors['required']">
+                        El correo electrónico es obligatorio
+                    </div>
+                    <div *ngIf="registroForm.controls['email'].errors['email']">
+                        El correo electrónico ingresado no es válido
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="name">
+                <input type="password" formControlName="contra" required />
+                <label>Contraseña</label>
+                <div *ngIf="submitted && registroForm.controls['contra'].errors && registroForm.controls['contra'].errors['required']"
+                    class="alert alert-danger" style="color: red;">
+                    Los apellidos son obligatorios
+                </div>
+            </div>
+
+            <div class="name">
+                <input type="password" formControlName="repetir" required />
+                <label>Repetir contraseña</label>
+                <div *ngIf="submitted && registroForm.controls['repetir'].errors && registroForm.controls['repetir'].errors['required']"
+                    class="alert alert-danger" style="color: red;">
+                    Los apellidos son obligatorios
+                </div>
+            </div>
+
+            <button type="submit">Registrarse</button>
+            <div class="iniciar">
+                Ya tengo cuenta, quiero <a routerLink="/login" routerLinkActive="currentPage">iniciar sesión</a>
+            </div>
+        </form>
     </div>
 
-    <div class="name">
-        <input type="text" formControlName="apellidos" required/>
-        <label>Apellidos</label>
-    </div>
-    
-    <div class="name">
-        <input type="email" formControlName="email" required/>
-        <label>Email</label>
-        
-    </div>
-    
-
-    <div class="name">
-        <input type="password" formControlName="contra" required/>
-        <label>Contraseña</label>
-       
-    </div>
-    
-    <div class="name">
-        <input type="password" formControlName="repetir" required/>
-        <label>Repetir contraseña</label>
-        
-    </div>
-    
-        <button type="submit" [disabled]="!registroForm.valid">Registrarse</button>
-        <div class="iniciar">
-            Ya tengo cuenta, quiero <a routerLink="/login" routerLinkActive="currentPage">iniciar sesión</a>
-        </div>
-    </form>
-</div>
-    
 </body>
+
 </html>

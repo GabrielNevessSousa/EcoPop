@@ -9,6 +9,7 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { DireccionComponent } from './direccion/direccion.component';
 import { ConfirmarPedidoComponent } from './confirmar-pedido/confirmar-pedido.component';
 import { RealizarPagoComponent } from './realizar-pago/realizar-pago.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RealizarPagoComponent } from './realizar-pago/realizar-pago.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
