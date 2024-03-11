@@ -10,7 +10,7 @@ export class LoginComponent {
   submitted = false;
 
   loginForm: FormGroup= new FormGroup({
-    email: new FormControl('',[Validators.required]),
+    email: new FormControl('',[Validators.required, Validators.email]),
     contra: new FormControl('',[Validators.required]),
   })
 

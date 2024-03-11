@@ -15,22 +15,33 @@
     <div class="formulario">
         <h1>Inicio de sesión</h1>
 
-    <form method="post">
+    <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
     
     <div class="name">
         <input type="email" formControlName="email" required/>
         <label>Email</label>
-        
+        <div *ngIf="submitted && loginForm.controls['email'].errors" class="alert alert-danger"
+                    style="color: red;">
+                    <div *ngIf="loginForm.controls['email'].errors['required']">
+                        Debes poner tu correo electrónico
+                    </div>
+                    <div *ngIf="loginForm.controls['email'].errors['email']">
+                        El correo electrónico ingresado no es válido
+                    </div>
+                </div>
     </div>
     
 
     <div class="name">
         <input type="password" formControlName="contra" required/>
         <label>Contraseña</label>
-       
+        <div *ngIf="submitted && loginForm.controls['contra'].errors && loginForm.controls['contra'].errors['required']"
+        class="alert alert-danger" style="color: red;">
+        Debes poner tu contraseña
+    </div>
     </div>
     
-        <button type="submit" [disabled]="!loginForm.valid">Iniciar sesión</button>
+        <button type="submit">Iniciar sesión</button>
         <div class="iniciar">
             No tengo cuenta, quiero <a routerLink="/registro" routerLinkActive="currentPage">registrarme</a>
         </div>
