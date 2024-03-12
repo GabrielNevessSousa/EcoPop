@@ -28,7 +28,7 @@
             <div class="name">
                 <input type="text" formControlName="apellidos" required />
                 <label>Apellidos</label>
-                <div *ngIf="submitted && registroForm.controls['apellidos'].errors && registroForm.controls['apellidos'].errors['required']"
+                <div *ngIf="submitted && registroForm.controls['apellidos'].errors && registroForm.controls['apellidos'].errors['required']" 
                     class="alert alert-danger" style="color: red;">
                     Los apellidos son obligatorios
                 </div>
