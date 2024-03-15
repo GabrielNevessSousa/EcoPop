@@ -20,7 +20,7 @@
                 <input type="text" formControlName="nombre" required />
                 <label>Nombre</label>
                 <div *ngIf="submitted && registroForm.controls['nombre'].errors && registroForm.controls['nombre'].errors['required']"
-                    class="alert alert-danger" style="color: red;">
+                    class="alert alert-danger" style="color: red; font-weight: bold;">
                     El nombre es obligatorio
                 </div>
             </div>
@@ -29,7 +29,7 @@
                 <input type="text" formControlName="apellidos" required />
                 <label>Apellidos</label>
                 <div *ngIf="submitted && registroForm.controls['apellidos'].errors && registroForm.controls['apellidos'].errors['required']"
-                    class="alert alert-danger" style="color: red;">
+                    class="alert alert-danger" style="color: red; font-weight: bold;">
                     Los apellidos son obligatorios
                 </div>
             </div>
@@ -38,7 +38,7 @@
                 <input type="email" formControlName="email" required />
                 <label>Email</label>
                 <div *ngIf="submitted && registroForm.controls['email'].errors" class="alert alert-danger"
-                    style="color: red;">
+                    style="color: red; font-weight: bold;">
                     <div *ngIf="registroForm.controls['email'].errors['required']">
                         El correo electrónico es obligatorio
                     </div>
@@ -53,7 +53,7 @@
                 <input type="password" formControlName="contra" required />
                 <label>Contraseña</label>
                 <div *ngIf="submitted && registroForm.controls['contra'].errors && registroForm.controls['contra'].errors['required']"
-                    class="alert alert-danger" style="color: red;">
+                    class="alert alert-danger" style="color: red; font-weight: bold;">
                     Los apellidos son obligatorios
                 </div>
             </div>
@@ -61,10 +61,10 @@
             <div class="name">
                 <input type="password" formControlName="repetir" required />
                 <label>Repetir contraseña</label>
-                <div *ngIf="submitted && registroForm.controls['repetir'].invalid" style="color: red;">
+                <div *ngIf="submitted && registroForm.controls['repetir'].invalid" style="color: red; font-weight: bold;">
                     Repetir la contraseña es obligatorio
                 </div>
-                <div *ngIf="submitted && registroForm.errors?.['mismatch']" style="color: red;">
+                <div *ngIf="submitted && registroForm.errors?.['mismatch']" style="color: red; font-weight: bold;">
                     Las contraseñas no coinciden
                 </div>
             </div>

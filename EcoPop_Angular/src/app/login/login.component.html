@@ -21,7 +21,7 @@
         <input type="email" formControlName="email" required/>
         <label>Email</label>
         <div *ngIf="submitted && loginForm.controls['email'].errors" class="alert alert-danger"
-                    style="color: red;">
+                    style="color: red; font-weight: bold;">
                     <div *ngIf="loginForm.controls['email'].errors['required']">
                         Debes poner tu correo electrónico
                     </div>
@@ -36,7 +36,7 @@
         <input type="password" formControlName="contra" required/>
         <label>Contraseña</label>
         <div *ngIf="submitted && loginForm.controls['contra'].errors && loginForm.controls['contra'].errors['required']"
-        class="alert alert-danger" style="color: red;">
+        class="alert alert-danger" style="color: red; font-weight: bold;">
         Debes poner tu contraseña
     </div>
     </div>
