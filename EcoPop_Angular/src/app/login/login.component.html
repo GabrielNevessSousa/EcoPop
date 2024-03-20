@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión</title>
 </head>
+
 <body>
 
     <div class="logo">
-    <img src="assets/imagenes/ecopop_logo.png" class="eco">
-</div>
+        <img src="assets/imagenes/ecopop_logo.png" class="eco">
+    </div>
 
     <div class="formulario">
         <h1>Inicio de sesión</h1>
 
-    <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
-    
-    <div class="name">
-        <input type="email" formControlName="email" required/>
-        <label>Email</label>
-        <div *ngIf="submitted && loginForm.controls['email'].errors" class="alert alert-danger"
+        <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+
+            <div class="name">
+                <input type="email" formControlName="email" required />
+                <label>Email</label>
+                <div *ngIf="submitted && loginForm.controls['email'].errors" class="alert alert-danger"
                     style="color: red; font-weight: bold;">
                     <div *ngIf="loginForm.controls['email'].errors['required']">
                         Debes poner tu correo electrónico
@@ -29,24 +31,26 @@
                         El correo electrónico ingresado no es válido
                     </div>
                 </div>
-    </div>
-    
+            </div>
 
-    <div class="name">
-        <input type="password" formControlName="contra" required/>
-        <label>Contraseña</label>
-        <div *ngIf="submitted && loginForm.controls['contra'].errors && loginForm.controls['contra'].errors['required']"
-        class="alert alert-danger" style="color: red; font-weight: bold;">
-        Debes poner tu contraseña
+
+            <div class="name">
+                <input type="password" formControlName="contra" required />
+                <label>Contraseña</label>
+                <div *ngIf="submitted && loginForm.controls['contra'].errors && loginForm.controls['contra'].errors['required']"
+                    class="alert alert-danger" style="color: red; font-weight: bold;">
+                    Debes poner tu contraseña
+                </div>
+            </div>
+
+            <button type="submit">Iniciar sesión</button>
+            <div class="iniciar">
+                No tengo cuenta, quiero <a routerLink="/registro" routerLinkActive="currentPage"
+                    style="color: #06413D; font-weight: bold;">registrarme</a>
+            </div>
+        </form>
     </div>
-    </div>
-    
-        <button type="submit">Iniciar sesión</button>
-        <div class="iniciar">
-            No tengo cuenta, quiero <a routerLink="/registro" routerLinkActive="currentPage" style="color: #06413D; font-weight: bold;">registrarme</a>
-        </div>
-    </form>
-</div>
-    
+
 </body>
+
 </html>
